@@ -28,11 +28,6 @@ view current =
             , viewIconButton Icon.Package "Package Manager" Actions.packages current
             , viewIconButton Icon.Settings "Settings" Actions.Settings current
             ]
-        , Html.div []
-            [ viewIconLink Icon.Slack "https://elmlang.slack.com/channels/ellie"
-            , viewIconLink Icon.GithubProjects "https://github.com/ellie-app/ellie/projects"
-            , viewIconLink Icon.GitHub "https://github.com/ellie-app/ellie"
-            ]
         ]
 
 
