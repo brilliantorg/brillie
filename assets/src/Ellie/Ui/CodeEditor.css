@@ -14,6 +14,9 @@ code-editor .CodeMirror {
   font-size: var(--editor-font-size);
 }
 
+
+
+
 .CodeMirror-focused .CodeMirror-activeline-background,
 .CodeMirror-focused .CodeMirror-activeline-gutter {
   background-color: #1b1b1b !important;
@@ -81,4 +84,33 @@ code-editor .CodeMirror {
 
 .CodeMirror .cm-attribute {
   color: #decb6b;
+}
+
+
+
+
+.CodeMirror .cm-header {
+  color: #72BBDB !important;
+  font-weight: bold !important;
+}
+
+.CodeMirror .cm-header-1 {
+  color: #72BBDB !important;
+  text-decoration: underline !important;
+  font-weight: bolder !important;
+}
+
+.CodeMirror .cm-arrow {
+  color: #EEBA53 !important;
+  text-decoration: none !important;
+}
+
+.CodeMirror .cm-markup-tag {
+  color: #FF9590 !important;
+  text-decoration: none !important;
+}
+
+.CodeMirror .cm-sectiontag {
+  color: #EEBA53 !important;
+  text-decoration: none !important;
 }
