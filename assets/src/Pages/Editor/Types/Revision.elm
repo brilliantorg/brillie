@@ -20,6 +20,7 @@ type alias Id =
 
 type alias Revision =
     { htmlCode : String
+    , markupCode : String
     , elmCode : String
     , packages : List Package
     , title : String
@@ -39,8 +40,9 @@ embedLink id =
 
 localStorageDecoder : Decoder Revision
 localStorageDecoder =
-    Decode.map5 Revision
+    Decode.map6 Revision
         (Decode.field "htmlCode" Decode.string)
+        (Decode.field "markupCode" Decode.string)
         (Decode.field "elmCode" Decode.string)
         (Decode.field "packages" (Decode.list Package.decoder))
         (Decode.field "title" Decode.string)
@@ -51,6 +53,7 @@ localStorageEncoder : Revision -> Value
 localStorageEncoder revision =
     Encode.object
         [ ( "htmlCode", Encode.string revision.htmlCode )
+        , ( "markupCode", Encode.string revision.markupCode )
         , ( "elmCode", Encode.string revision.elmCode )
         , ( "packages", Encode.list Package.encoder revision.packages )
         , ( "title", Encode.string revision.title )
@@ -78,6 +81,21 @@ default packages =
 </body>
 </html>
 """
+    , markupCode = """# Start up
+
+###
+[Go]
+
+###
+A
+
+B
+
+###
+c
+
+# Continue
+D"""
     , elmCode = """module Main exposing (main)
 
 import Browser

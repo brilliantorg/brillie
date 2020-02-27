@@ -16,8 +16,8 @@ type alias Config msg =
     { elmCode : String
     , onElmChange : String -> msg
     , onTokenChange : CodeEditor.Located CodeEditor.Token -> msg
-    , htmlCode : String
-    , onHtmlChange : String -> msg
+    , markupCode : String
+    , onMarkupChange : String -> msg
     , onResize : Float -> msg
     , ratio : Float
     , vimMode : Bool
@@ -76,7 +76,7 @@ view config =
             , originalRatio = 0.75
             , onResize = config.onResize
             , minSize = 24
-            , first =
+            , second =
                 Html.div [ containerStyles ]
                     [ viewEditorHeader config "Brelm" "Format Elm Code" config.onFormat <| Icon.view Icon.Format
                     , Html.div [ editorStyles ]
@@ -124,9 +124,9 @@ view config =
                         Nothing ->
                             Html.text ""
                     ]
-            , second =
+            , first =
                 Html.div [ containerStyles ]
-                    [ viewEditorHeader config "HTML" "Collapse HTML Editor" config.onCollapse <|
+                    [ viewEditorHeader config "Brilliant Markup" "Collapse Markup Editor" config.onCollapse <|
                         if config.ratio == 1 then
                             Html.div
                                 [ css [ height (pct 100), transform (rotate (deg 180)) ] ]
@@ -136,12 +136,12 @@ view config =
                             Icon.view Icon.Chevron
                     , Html.div [ editorStyles ]
                         [ CodeEditor.view
-                            [ CodeEditor.value config.htmlCode
-                            , CodeEditor.onChange config.onHtmlChange
-                            , CodeEditor.mode "htmlmixed"
+                            [ CodeEditor.value config.markupCode
+                            , CodeEditor.onChange config.onMarkupChange
+                            , CodeEditor.mode "brillink"
                             , CodeEditor.tabSize 2
                             , CodeEditor.vim config.vimMode
-                            , CodeEditor.id "html"
+                            , CodeEditor.id "brillink"
                             ]
                         ]
                     ]
