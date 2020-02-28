@@ -81,10 +81,7 @@ default packages =
 </body>
 </html>
 """
-    , markupCode = """# Start up
-
-###
-# Let's do this
+    , markupCode = """# Let's do this
 
 ### first
 Most of the dice you encounter when playing games of
