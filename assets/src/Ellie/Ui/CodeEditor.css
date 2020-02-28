@@ -14,9 +14,6 @@ code-editor .CodeMirror {
   font-size: var(--editor-font-size);
 }
 
-
-
-
 .CodeMirror-focused .CodeMirror-activeline-background,
 .CodeMirror-focused .CodeMirror-activeline-gutter {
   background-color: #1b1b1b !important;
@@ -86,27 +83,14 @@ code-editor .CodeMirror {
   color: #decb6b;
 }
 
-
-
-
 .CodeMirror .cm-header {
   color: #72BBDB !important;
   font-weight: bold !important;
 }
 
-.CodeMirror .cm-header-1 {
-  color: #72BBDB !important;
-  text-decoration: underline !important;
-  font-weight: bolder !important;
-}
-
 .CodeMirror .cm-arrow {
   color: #EEBA53 !important;
-  text-decoration: none !important;
-}
-
-.CodeMirror .cm-markup-tag {
-  color: #FF9590 !important;
+  font-weight: bold !important;
   text-decoration: none !important;
 }
 
@@ -114,3 +98,31 @@ code-editor .CodeMirror {
   color: #EEBA53 !important;
   text-decoration: none !important;
 }
+
+.CodeMirror .cm-markup-bracket {
+  font-weight: bold !important;
+  color: #006E92 !important;
+}
+
+.CodeMirror .cm-literal-arg {
+  color: #88D13F !important
+}
+
+.CodeMirror .cm-literal-string {
+  color: #88D13F !important
+}
+
+.CodeMirror .cm-markup-label {
+  color: #CD8CFF !important;
+}
+
+.CodeMirror .cm-markup-tag {
+  color: #FF9590 !important;
+  text-decoration: none !important;
+}
+
+.CodeMirror .cm-markup-keyword {
+  color: #FF9590 !important;
+  text-decoration: none !important;
+}
+
