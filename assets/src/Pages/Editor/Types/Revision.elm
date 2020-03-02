@@ -87,11 +87,9 @@ default packages =
 Most of the dice you encounter when playing games of
 chance look the same: 6 faces, each of which has a differenr
 number of pips, from 1 to 6.
-[Image "/media/whatever/die.png"]
 [Continue -> next]
 
 ### second
-[Die6Map 1 2 3 4 5 6]
 The same die can also be represented with text:
 we'll say this is a **(1,2,3,4,5,6)** die. 
 That’s not the only possibility for a six-sided

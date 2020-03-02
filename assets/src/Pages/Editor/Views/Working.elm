@@ -143,8 +143,8 @@ viewWorkspace model =
         , originalRatio = 0.5
         , onResize = WorkingState.WorkbenchResized
         , minSize = 24
-        , first = viewEditors model
-        , second = viewWorkbench model
+        , upperEditor = viewEditors model
+        , lowerEditor = viewWorkbench model
         }
 
 
