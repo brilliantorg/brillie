@@ -125,6 +125,11 @@ code-editor .CodeMirror {
   text-decoration: none !important;
 }
 
+.CodeMirror .cm-markup-option-tag {
+  color: #EBC3C2 !important;
+  text-decoration: none !important;
+}
+
 .CodeMirror .cm-markup-keyword {
   color: #FF9590 !important;
   font-weight: bold !important;
